@@ -201,6 +201,7 @@ PRODUCT_PACKAGES += \
     init.modem.rc \
     init.mt6771.rc \
     init.mt6771.usb.rc \
+    init.safailnet.rc \
     init.oppo.reserve.rc \
     init.sensor_1_0.rc \
     fstab.mt6771 \
