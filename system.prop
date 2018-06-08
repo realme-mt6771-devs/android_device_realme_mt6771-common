@@ -46,6 +46,7 @@ persist.sys.binary_xml=false
 debug.hwui.renderer=opengl
 ro.config.avoid_gfx_accel=true
 debug.sf.enable_hwc_vds=0
+debug.hwui.use_buffer_age=false
 
 # Pre-Rendering
 ro.vendor.perf.scroll_opt=true
