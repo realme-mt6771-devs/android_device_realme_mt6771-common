@@ -657,8 +657,8 @@ on boot
     write /proc/bootprof "INIT:boot"
 
     # IO write.
-    write /proc/sys/vm/dirty_writeback_centisecs 500
-    write /proc/sys/vm/dirty_ratio 21
+    write /proc/sys/vm/dirty_writeback_centisecs 3000
+    write /proc/sys/vm/dirty_ratio 10
     
     chmod 0660 /sys/power/autosleep
 
