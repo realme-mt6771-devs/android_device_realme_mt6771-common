@@ -47,6 +47,9 @@ debug.hwui.renderer=opengl
 ro.config.avoid_gfx_accel=true
 debug.sf.enable_hwc_vds=0
 
+# Pre-Rendering
+ro.vendor.perf.scroll_opt=true
+
 # Radio
 persist.sys.fflag.override.settings_provider_model=false
 
