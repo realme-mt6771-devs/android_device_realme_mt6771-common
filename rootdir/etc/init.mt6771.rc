@@ -923,6 +923,8 @@ on property:sys.boot_completed=1
     write /sys/block/sdc/queue/nr_requests 128
     write /sys/block/dm-0/queue/read_ahead_kb 128
     write /sys/block/dm-1/queue/read_ahead_kb 128
+    #Reinit lmkd to reconfigure lmkd properties
+    setprop lmkd.reinit 1
 
 # start EAS+
 on property:sys.boot_completed=1
