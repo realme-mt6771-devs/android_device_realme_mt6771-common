@@ -64,6 +64,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
     android.hardware.drm@1.3-service.clearkey
 
+# DT2W
+PRODUCT_PACKAGES += \
+    DT2W-Service-MT6771
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \
