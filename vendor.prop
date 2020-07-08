@@ -196,3 +196,4 @@ debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
 debug.stagefright.ccodec=0
 ro.config.vc_call_vol_steps=7
+ro.surface_flinger.running_without_sync_framework=true
