@@ -702,7 +702,6 @@ vendor/lib64/libstagefrighthw.so
 # Mediatek
 vendor/bin/hw/android.hardware.sensors@1.0-service-mediatek
 vendor/bin/hw/android.hardware.usb@1.1-service-mediatek
-vendor/bin/hw/android.hardware.wifi@1.0-service-mediatek
 vendor/bin/hw/vendor.mediatek.hardware.dfps@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.log@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.1-service
@@ -1959,12 +1958,13 @@ vendor/lib64/hw/thermal.mt6771.so
 # WiFi
 -framework/mtk-wifi-service.jar
 bin/iwpriv
+vendor/bin/hw/android.hardware.wifi@1.0-service-mediatek
 vendor/bin/hw/hostapd
 vendor/bin/hw/wpa_supplicant
 vendor/bin/hostapd_cli
 vendor/etc/init/hostapd.android.rc
 vendor/lib/libwpa_client.so
-vendor/lib64/libwifi-hal.so
+vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so
 vendor/lib64/libwpa_client.so
 
 # Misc
