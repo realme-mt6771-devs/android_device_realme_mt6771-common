@@ -177,7 +177,8 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2.vendor
+    android.hardware.power@1.2.vendor \
+    vendor.mediatek.hardware.power@2.1-impl
 
 # Perf
 PRODUCT_COPY_FILES += \
