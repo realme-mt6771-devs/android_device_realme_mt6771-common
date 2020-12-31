@@ -59,7 +59,14 @@ function blob_fixup() {
             "${PATCHELF}" --add-needed "libunwindstack.so" "${2}"
             ;;
         vendor/bin/hw/android.hardware.wifi@1.0-service-mediatek)
+            "${PATCHELF}" --add-needed "libcompiler_rt.so" "${2}"
             "${PATCHELF}" --replace-needed "libwifi-hal.so" "libwifi-hal-mtk.so" "${2}"
+            ;;
+        vendor/bin/hw/hostapd)
+            "${PATCHELF}" --add-needed "libcompiler_rt.so" "${2}"
+            ;;
+        vendor/bin/hw/wpa_supplicant)
+            "${PATCHELF}" --add-needed "libcompiler_rt.so" "${2}"
             ;;
         vendor/lib/hw/android.hardware.audio@4.0-impl-mediatek.so)
             "${PATCHELF}" --replace-needed "android.hardware.audio.common@4.0-util.so" "android.hardware.audio.common@4.0-util-v28.so" "${2}"
