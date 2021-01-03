@@ -841,7 +841,7 @@ vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.1.so
 
 # Neural-networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.1-service-apunn
-vendor/bin/hw/android.hardware.neuralnetworks@1.1-service-gpunn
+vendor/bin/hw/android.hardware.neuralnetworks@1.1-service-gpunn|192e7b29f4cdf483db1b99d5f7cfc3a137dbe6ac
 vendor/etc/init/android.hardware.neuralnetworks@1.1-service-apunn.rc
 vendor/etc/init/android.hardware.neuralnetworks@1.1-service-gpunn.rc
 

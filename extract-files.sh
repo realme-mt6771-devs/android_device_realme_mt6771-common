@@ -55,6 +55,9 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        vendor/bin/hw/android.hardware.neuralnetworks@1.1-service-gpunn)
+            "${PATCHELF}" --add-needed "libunwindstack.so" "${2}"
+            ;;
         vendor/lib64/libmtk-ril.so)
             sed -i 's|AT+EAIC=2|AT+EAIC=3|g' "${2}"
             ;;
