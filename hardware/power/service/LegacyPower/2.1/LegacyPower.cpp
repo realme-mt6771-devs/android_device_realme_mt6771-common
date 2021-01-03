@@ -23,6 +23,7 @@
 #include <hardware/hardware.h>
 #include <hardware/power.h>
 #include <time.h>
+#include <android-base/file.h>
 
 #include "power_util.h"
 
@@ -241,6 +242,14 @@ Return<void> Power::powerHint(::android::hardware::power::V1_0::PowerHint hint, 
 
 Return<void> Power::setFeature(Feature feature, bool activate)  {
     ALOGV("setFeature, %d, %d", (int)feature, (int)activate);
+    switch (feature) {
+        case Feature::POWER_FEATURE_DOUBLE_TAP_TO_WAKE:
+            ::android::base::WriteStringToFile(activate ? "1" : "0",
+                        "/proc/touchpanel/double_tap_enable"
+                        , true);
+        default:
+            break;
+     }
     return Void();
 }
 

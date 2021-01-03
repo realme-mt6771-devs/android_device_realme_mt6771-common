@@ -15,6 +15,7 @@ LOCAL_SRC_FILES := LegacyPower.cpp \
         ../../util/powerd_cmd.cpp
 
 LOCAL_SHARED_LIBRARIES := liblog \
+	libbase \
         libhardware \
         libhwbinder \
         libhidlbase \
