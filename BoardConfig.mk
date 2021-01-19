@@ -93,5 +93,7 @@ VENDOR_SECURITY_PATCH := 2020-05-05
 # SEPolicy
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
 # VNDK
 BOARD_VNDK_VERSION := current
