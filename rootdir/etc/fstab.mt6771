@@ -5,7 +5,7 @@
 # 1 "<command-line>" 2
 # 1 "vendor/mediatek/proprietary/hardware/fstab/mt6771/fstab.in"
 # 122 "vendor/mediatek/proprietary/hardware/fstab/mt6771/fstab.in"
-/dev/block/platform/bootdevice/by-name/system / ext4 ro wait,verify,recoveryonly,async_discard
+/dev/block/platform/bootdevice/by-name/system /system ext4 ro wait,verify,recoveryonly,async_discard
 
 /dev/block/platform/bootdevice/by-name/vendor /vendor ext4 ro wait,verify,recoveryonly,async_discard
 
