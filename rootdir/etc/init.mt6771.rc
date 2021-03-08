@@ -973,7 +973,7 @@ on boot
     chmod 660 /dev/ttyGS1
     chown system radio /dev/ttyGS1
 
-    setprop init.svc.console stopped
+    stop console
 
 #ifdef VENDOR_EDIT
 #Qiulei@PSW.CN.WiFi.Hardware, 2018/02/03
