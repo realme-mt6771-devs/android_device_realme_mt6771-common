@@ -632,6 +632,9 @@ vendor/bin/hw/camerahalserver
 # Camera-configs
 vendor/etc/camera/attribute.model
 
+# Charger - from Redmi/merlin/merlin:11/RP1A.200720.011/V12.5.1.0.RJOMIXM:user/release-keys
+bin/charger:bin/chargeonlymode|eeb5a0e80057cce782b4555389310e83a408ad37
+
 # Configstore
 vendor/bin/hw/android.hardware.configstore@1.1-service
 vendor/etc/init/android.hardware.configstore@1.1-service.rc
