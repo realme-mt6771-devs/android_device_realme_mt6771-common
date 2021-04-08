@@ -12,6 +12,9 @@ vendor/lib64/libaedv.so|bd09673530e80f6cde27d91229b6df6394191053
 vendor/lib64/libladder.so|47ab171fde2026c25c0c63f0af9bfcee3fcd74a9
 vendor/lib64/libudf.so|00563b48abe3e19856133a87775363a9ef98c049
 
+# APN
+etc/apns-conf.xml:product/etc/apns-conf.xml
+
 # Audio
 vendor/etc/dirac/17065/diracmobile.config
 vendor/etc/dirac/17065/diracvdd.bin
