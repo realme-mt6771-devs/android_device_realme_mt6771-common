@@ -163,7 +163,6 @@ persist.log.tag.CdmaMoSms=I
 persist.log.tag.CdmaMtSms=I
 ro.vendor.mtk_log_hide_gps=0
 ro.vendor.mtk_modem_monitor_support=1
-ro.vendor.have_aee_feature=1
 ro.vendor.mtk_exchange_support=1
 ro.vendor.md_log_memdump_wait=15
 persist.vendor.mdlog.flush_log_ratio=66311
