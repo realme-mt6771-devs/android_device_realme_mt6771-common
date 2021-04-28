@@ -454,26 +454,16 @@ vendor/etc/camera/attribute.model
 vendor/bin/hw/android.hardware.configstore@1.1-service
 vendor/etc/init/android.hardware.configstore@1.1-service.rc
 
-# DRM
+# DRM (Hardware) - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2106051247:user/release-keys
+vendor/bin/hw/android.hardware.drm@1.3-service.widevine|bb1ee465a6608d2704fbe9a787acbc7c4dc0aa85
+vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|c35e1a6f9a6faff19064a81e07c4be82ceaf4bb5
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
 
-# DRM-Hardware
-vendor/bin/hw/android.hardware.drm@1.0-service
-vendor/bin/hw/android.hardware.drm@1.1-service.clearkey
-vendor/bin/hw/android.hardware.drm@1.1-service.widevine
-vendor/etc/init/android.hardware.drm@1.0-service.rc
-vendor/etc/init/android.hardware.drm@1.1-service.clearkey.rc
-vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
-vendor/lib/hw/android.hardware.drm@1.0-impl.so
-
-# DRM-Widevine
-vendor/lib/libwvhidl.so
-vendor/lib/mediadrm/libdrmclearkeyplugin.so
-vendor/lib/mediadrm/libmockdrmcryptoplugin.so
-vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib64/libwvhidl.so
-vendor/lib64/mediadrm/libdrmclearkeyplugin.so
-vendor/lib64/mediadrm/libmockdrmcryptoplugin.so
-vendor/lib64/mediadrm/libwvdrmengine.so
+# DRM (Widevine) - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2106051247:user/release-keys
+vendor/lib/mediadrm/libwvdrmengine.so|6828d27a19ef358097936e3cca808afc699226e4
+vendor/lib/libwvhidl.so|1f658a463e92b4059c04ecd2f6c41356f3f1efbb
+vendor/lib64/mediadrm/libwvdrmengine.so|841c6d91f8dba600936f2b9b831e2ae2cdcee8d7
+vendor/lib64/libwvhidl.so|b0626425e9a67c3d28e7bf002761b4e95a732c48
 
 # Display-Hardware
 vendor/bin/hw/android.hardware.graphics.allocator@2.0-service
