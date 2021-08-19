@@ -1912,6 +1912,10 @@ vendor/lib64/hw/power.mt6771.so
 # Radio
 vendor/lib64/libmtk-ril.so|c7562c9479f66b2a7a685707d34544932d707ac7
 
+# Radio - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2106051247:user/release-keys
+vendor/lib/libsysenv.so|9bcd41968251814c2209257173e02a8589fa8f04
+vendor/lib64/libsysenv.so|8faeff48161ab28d948256d543abdb2a8f08fa99
+
 # Sensors
 vendor/lib/libsensorndkbridge.so
 vendor/lib64/hw/sensors.mt6771.so
@@ -2246,7 +2250,6 @@ vendor/lib/libstorage_otp.so
 vendor/lib/libSwJpgCodec.so
 vendor/lib/libswresample.so
 vendor/lib/libswscale.so
-vendor/lib/libsysenv.so
 vendor/lib/libTBaseProvisioning.so
 vendor/lib/libTBaseProvisioningAT.so
 vendor/lib/libTEECommon.so
@@ -2397,7 +2400,6 @@ vendor/lib64/libstface_fd_api.so
 vendor/lib64/libstface_seg_ocl.so
 vendor/lib64/libswresample.so
 vendor/lib64/libswscale.so
-vendor/lib64/libsysenv.so
 vendor/lib64/libTBaseProvisioning.so
 vendor/lib64/libTBaseProvisioningAT.so
 vendor/lib64/libTEECommon.so
