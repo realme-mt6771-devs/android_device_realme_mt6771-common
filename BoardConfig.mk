@@ -51,3 +51,6 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6771
+
+# Security patch level
+VENDOR_SECURITY_PATCH := 2020-05-05
