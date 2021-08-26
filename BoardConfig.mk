@@ -77,6 +77,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_BOARD_PLATFORM := mt6771
 
 # Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Recovery
