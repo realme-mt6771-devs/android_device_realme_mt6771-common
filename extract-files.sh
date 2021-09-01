@@ -58,6 +58,9 @@ function blob_fixup() {
         vendor/bin/hw/android.hardware.neuralnetworks@1.1-service-gpunn)
             "${PATCHELF}" --add-needed "libunwindstack.so" "${2}"
             ;;
+        vendor/lib/hw/android.hardware.audio@4.0-impl-mediatek.so)
+            "${PATCHELF}" --replace-needed "android.hardware.audio.common@4.0-util.so" "android.hardware.audio.common@4.0-util-v28.so" "${2}"
+            ;;
         vendor/lib64/libmtk-ril.so)
             sed -i 's|AT+EAIC=2|AT+EAIC=3|g' "${2}"
             ;;
