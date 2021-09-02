@@ -61,6 +61,10 @@ function blob_fixup() {
         vendor/lib/hw/android.hardware.audio@4.0-impl-mediatek.so)
             "${PATCHELF}" --replace-needed "android.hardware.audio.common@4.0-util.so" "android.hardware.audio.common@4.0-util-v28.so" "${2}"
             ;;
+        vendor/lib/hw/audio.primary.mt6771.so)
+            "${PATCHELF}" --replace-needed "libmedia_helper.so" "libmedia_helper-v28.so" "${2}"
+            "${PATCHELF}" --replace-needed "libxml2.so" "libxml2-v28.so" "${2}"
+            ;;
         vendor/lib64/libmtk-ril.so)
             sed -i 's|AT+EAIC=2|AT+EAIC=3|g' "${2}"
             ;;

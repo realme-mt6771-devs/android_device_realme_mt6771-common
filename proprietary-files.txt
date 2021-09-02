@@ -59,7 +59,7 @@ vendor/bin/hw/android.hardware.audio@4.0-service-mediatek
 vendor/etc/init/android.hardware.audio@4.0-service-mediatek.rc
 vendor/lib/hw/android.hardware.audio.effect@4.0-impl.so
 vendor/lib/hw/android.hardware.audio@4.0-impl-mediatek.so|8ae62db76c61ad8a4abd7f9d5bf8c16701fd9b60
-vendor/lib/hw/audio.primary.mt6771.so
+vendor/lib/hw/audio.primary.mt6771.so|f06d08088a8ce46beead4bd4f9af7d689e53af5b
 vendor/lib/hw/audio.r_submix.mt6771.so
 vendor/lib/hw/audio.usb.mt6771.so
 vendor/lib/vendor.mediatek.hardware.audio@4.1.so
