@@ -700,20 +700,6 @@ vendor/lib/libmtkcutils.so
 vendor/lib/libmtkhardware_legacy.so
 vendor/lib/libmtklimiter_vendor.so
 vendor/lib/libmtknetutils.so
-vendor/lib/libMtkOmxAdpcmDec.so
-vendor/lib/libMtkOmxAdpcmEnc.so
-vendor/lib/libMtkOmxAlacDec.so
-vendor/lib/libMtkOmxApeDec.so
-vendor/lib/libMtkOmxCore.so
-vendor/lib/libMtkOmxG711Dec.so
-vendor/lib/libMtkOmxGsmDec.so
-vendor/lib/libMtkOmxMp3Dec.so
-vendor/lib/libMtkOmxRawDec.so
-vendor/lib/libMtkOmxVdecEx.so
-vendor/lib/libMtkOmxVenc.so
-vendor/lib/libMtkOmxVorbisEnc.so
-vendor/lib/libMtkOmxWmaDec.so
-vendor/lib/libMtkOmxWmaProDec.so
 vendor/lib/libmtkproperty.so
 vendor/lib/libmtkrillog.so
 vendor/lib/libmtkshifter_vendor.so
@@ -802,7 +788,6 @@ vendor/lib64/libmtkhardware_legacy.so
 vendor/lib64/libmtklimiter_vendor.so
 vendor/lib64/libmtknetcap.so
 vendor/lib64/libmtknetutils.so
-vendor/lib64/libMtkOmxCore.so
 vendor/lib64/libmtkproperty.so
 vendor/lib64/libmtkrillog.so
 vendor/lib64/libmtkrilutils.so
@@ -855,6 +840,26 @@ vendor/bin/hw/android.hardware.neuralnetworks@1.1-service-apunn
 vendor/bin/hw/android.hardware.neuralnetworks@1.1-service-gpunn|192e7b29f4cdf483db1b99d5f7cfc3a137dbe6ac
 vendor/etc/init/android.hardware.neuralnetworks@1.1-service-apunn.rc
 vendor/etc/init/android.hardware.neuralnetworks@1.1-service-gpunn.rc
+
+# OMX
+vendor/etc/mtk_omx_core.cfg
+vendor/lib/libffmpeg_omx.so
+vendor/lib/libMtkOmxAdpcmDec.so
+vendor/lib/libMtkOmxAdpcmEnc.so
+vendor/lib/libMtkOmxAlacDec.so
+vendor/lib/libMtkOmxApeDec.so
+vendor/lib/libMtkOmxCore.so
+vendor/lib/libMtkOmxG711Dec.so
+vendor/lib/libMtkOmxGsmDec.so
+vendor/lib/libMtkOmxMp3Dec.so
+vendor/lib/libMtkOmxRawDec.so
+vendor/lib/libMtkOmxVdecEx.so|dd26da2c43d43d3847dc60ac21e91efaee5a092f
+vendor/lib/libMtkOmxVenc.so
+vendor/lib/libMtkOmxVorbisEnc.so
+vendor/lib/libMtkOmxWmaDec.so
+vendor/lib/libMtkOmxWmaProDec.so
+vendor/lib64/libffmpeg_omx.so
+vendor/lib64/libMtkOmxCore.so
 
 # Oppo
 vendor/bin/hw/vendor.oppo.engnative.engineer@1.0-service
@@ -2079,7 +2084,6 @@ vendor/etc/mddb/MDDB.META.ODB_MT6771_S00_MOLY_LR12A_R2_PIE_RM_PR2_TC16_SP_V1_P3_
 vendor/etc/mddb/MDDB.META_MT6771_S00_MOLY_LR12A_R2_PIE_RM_PR2_TC16_SP_V1_P3_1_ulwctg_n.EDB
 vendor/etc/mddb/MDDB_InfoCustomAppSrcP_MT6771_S00_MOLY_LR12A_R2_PIE_RM_PR2_TC16_SP_V1_P3_1_ulwctg_n.EDB
 vendor/etc/mddb/mdm_layout_desc_1_ulwctg_n.dat
-vendor/etc/mtk_omx_core.cfg
 vendor/etc/M_Liveness_Antispoofing_General_6.0.6_14700201_24320401_half.model
 vendor/etc/M_Verify_MimicRes_Common_3.4.0_10000101_50001201_half.model
 vendor/etc/ncf_pack.ncf
@@ -2166,7 +2170,6 @@ vendor/lib/libcustom_nvram.so
 vendor/lib/libcvsd_mtk.so
 vendor/lib/libdpframework.so
 vendor/lib/libDR.so
-vendor/lib/libffmpeg_omx.so
 vendor/lib/libffmpeg_utils.so
 vendor/lib/libfgauge_gm30.so
 vendor/lib/libfile_op.so
@@ -2328,7 +2331,6 @@ vendor/lib64/libfeature_eis.so
 vendor/lib64/libfeature_fsc.so
 vendor/lib64/libfeature_lmv.so
 vendor/lib64/libfeature_rss.so
-vendor/lib64/libffmpeg_omx.so
 vendor/lib64/libffmpeg_utils.so
 vendor/lib64/libfft_vendor.so
 vendor/lib64/libfile_op.so
