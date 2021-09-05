@@ -2034,7 +2034,6 @@ vendor/bin/netdagent
 vendor/bin/netdc
 vendor/bin/rpmbengclient_test
 vendor/bin/rttv
-vendor/bin/self-init
 vendor/bin/TBaseDeviceBinding
 vendor/bin/volte_imcb
 vendor/bin/volte_imsm_93
