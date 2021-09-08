@@ -65,6 +65,7 @@ function blob_fixup() {
         vendor/bin/hw/hostapd)
             "${PATCHELF}" --add-needed "libcompiler_rt.so" "${2}"
             "${PATCHELF}" --replace-needed "libc++.so" "libc++-v28.so" "${2}"
+            "${PATCHELF}" --replace-needed "libhwbinder.so" "libhwbinder-v28.so" "${2}"
             ;;
         vendor/bin/hw/wpa_supplicant)
             "${PATCHELF}" --add-needed "libcompiler_rt.so" "${2}"
