@@ -615,6 +615,13 @@ vendor/firmware/WIFI_RAM_CODE_6759
 vendor/firmware/WMT_SOC.cfg
 vendor/firmware/WMT_SOC_17197.cfg
 
+# Fuelgauged
+vendor/bin/fuelgauged
+vendor/bin/fuelgauged_nvram
+vendor/etc/init/fuelgauged_init.rc
+vendor/etc/init/fuelgauged_nvram_init.rc
+vendor/lib/libfgauge_gm30.so
+
 # GPS - from full_v7101o-user 10 QP1A.190711.020 q0mp1t1v1001bsp release-keys
 vendor/bin/hw/android.hardware.gnss@2.0-service-mediatek|df0b40ea71db8d0b9e2d0419163d9b41f3ea1c4a
 vendor/bin/charon|cbdf24397f929528663689cf23560dad24d4130d
@@ -697,7 +704,6 @@ vendor/bin/hw/vendor.mediatek.hardware.dfps@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.log@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.1-service
 vendor/bin/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-service
-vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
 vendor/bin/hw/vendor.mediatek.hardware.power@2.1-service
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/etc/init/android.hardware.sensors@1.0-service-mediatek.rc
@@ -707,7 +713,6 @@ vendor/etc/init/vendor.mediatek.hardware.dfps@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.log@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mms@1.1-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mtkcodecservice@1.1-service.rc
-vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
 vendor/etc/init/vendor.mediatek.hardware.power@2.1-init.rc
 vendor/etc/init/vendor.mediatek.hardware.power@2.1-service.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
@@ -716,7 +721,6 @@ vendor/etc/media_codecs_mediatek_video.xml
 vendor/lib/hw/vendor.mediatek.hardware.dfps@1.0-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.mms@1.1-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
-vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.power@2.1-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.pq@2.3-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
@@ -739,8 +743,6 @@ vendor/lib/vendor.mediatek.hardware.mms@1.0.so
 vendor/lib/vendor.mediatek.hardware.mms@1.1.so
 vendor/lib/vendor.mediatek.hardware.mtkcodecservice@1.1.so
 vendor/lib/vendor.mediatek.hardware.netdagent@1.0.so
-vendor/lib/vendor.mediatek.hardware.nvram@1.0.so
-vendor/lib/vendor.mediatek.hardware.nvram@1.1.so
 vendor/lib/vendor.mediatek.hardware.power@2.0.so
 vendor/lib/vendor.mediatek.hardware.power@2.1.so
 vendor/lib/vendor.mediatek.hardware.pq@2.0.so
@@ -752,7 +754,6 @@ vendor/lib64/hw/android.hardware.sensors@1.0-impl-mediatek.so
 vendor/lib64/hw/vendor.mediatek.hardware.dfps@1.0-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.mms@1.1-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
-vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.power@2.1-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.pq@2.3-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
@@ -825,7 +826,6 @@ vendor/lib64/libmtktinyxml.so
 vendor/lib64/libmtkutils.so
 vendor/lib64/libmtk_drvb.so
 vendor/lib64/vendor.mediatek.hardware.apmonitor@1.0.so
-vendor/lib64/vendor.mediatek.hardware.atci@1.0.so
 vendor/lib64/vendor.mediatek.hardware.dfps@1.0.so
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.0.so
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.1.so
@@ -834,8 +834,6 @@ vendor/lib64/vendor.mediatek.hardware.mms@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.1.so
 vendor/lib64/vendor.mediatek.hardware.mtkcodecservice@1.1.so
 vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
-vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
-vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 vendor/lib64/vendor.mediatek.hardware.power@1.1.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 vendor/lib64/vendor.mediatek.hardware.power@2.1.so
@@ -866,6 +864,31 @@ vendor/bin/hw/android.hardware.neuralnetworks@1.1-service-apunn
 vendor/bin/hw/android.hardware.neuralnetworks@1.1-service-gpunn|192e7b29f4cdf483db1b99d5f7cfc3a137dbe6ac
 vendor/etc/init/android.hardware.neuralnetworks@1.1-service-apunn.rc
 vendor/etc/init/android.hardware.neuralnetworks@1.1-service-gpunn.rc
+
+# NVRAM - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2106051247:user/release-keys
+vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service|8f8b1c931ce4859f58867bf4bf320fcae47bb22b
+vendor/bin/atcid|c0137c01d46704fe0b7432a0257160245ffa51d6
+vendor/bin/nvram_daemon|256cbae6f6bdd89961c74a5fadf44e0fd90d661a
+vendor/etc/init/atcid.rc|001abe08dd220ae80e5ed4df3ef57ac90b98034f
+vendor/etc/init/nvram_daemon.rc|02c739c622f871b7ec801755f64d063eee91ba77
+vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc|328d76546b36b7f67f48dff0fad46a419188a7f7
+vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so|6ce8eb984e7f821c79ea1fde8bd1470641b881fd
+vendor/lib/libcustom_nvram.so|75dea5ba3fe898dd1f2e0ebd4f6123ea62d1c52f
+vendor/lib/libnvram.so|a13182a5e7fe16b485524983ef2d0becbd107b1b
+vendor/lib/libnvram_daemon_callback.so|c5b93e48668d419573c7e9da0d72707575189ab5
+vendor/lib/libnvram_platform.so|a889e5cbdc198a4333dbb2c1fbb4144b150f20a0
+vendor/lib/libnvram_sec.so|664c662ddd716ba9988608d11b17b1c5f7131e46
+vendor/lib/vendor.mediatek.hardware.nvram@1.0.so|50f11bde5ef568117b73307af88970ed290ddbf2
+vendor/lib/vendor.mediatek.hardware.nvram@1.1.so|8e888c2f7f317062f2f4e71c75903b82fd1819a4
+vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so|f35f6ccad0584f3de90dce80fbf6a3fba75d8a66
+vendor/lib64/libcustom_nvram.so|c1b2b4f05399d5a1d47d8cd9fc27622e79e55a24
+vendor/lib64/libnvram.so|31d858956ba1a630b3ebbf2dfa961202db5db103
+vendor/lib64/libnvram_daemon_callback.so|b828b4d80ce2c48d8f42e5b6b96cf7750c0f567c
+vendor/lib64/libnvram_platform.so|7345d991c4a1a0e30251a298f880c48010a0417c
+vendor/lib64/libnvram_sec.so|afd74aedc4e105488aeeaf309b076be1631eeb34
+vendor/lib64/vendor.mediatek.hardware.atci@1.0.so|48a4f21323851cc7be7ce266dc3c8ae293e7b3ab
+vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so|d6fc7f16b33aa8a89ad5ab1c6e8f11ff00e7fadb
+vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so|59f418dad1e81a243873f60e73ff801c7445acde
 
 # OMX
 vendor/etc/mtk_omx_core.cfg
@@ -1959,7 +1982,6 @@ vendor/app/mcRegistry/090b0000000000000000000000000000.drbin
 vendor/app/mcRegistry/090b0000000000000000000000000000.tlbin
 vendor/app/mcRegistry/09140000000000000000000000000000.tlbin
 vendor/app/mcRegistry/09190000000000000000000000000000.tlbin
-vendor/bin/atcid
 vendor/bin/atci_service
 vendor/bin/audiocmdservice_atci
 vendor/bin/autobt
@@ -1974,8 +1996,6 @@ vendor/bin/epdg_wod
 vendor/bin/exp_lock
 vendor/bin/factory
 vendor/bin/flashlessd
-vendor/bin/fuelgauged
-vendor/bin/fuelgauged_nvram
 vendor/bin/gsm0710muxd
 vendor/bin/hw/mtkfusionrild
 vendor/bin/hw/power_native_test_v_2_0
@@ -1997,7 +2017,6 @@ vendor/bin/mtkcam-debug
 vendor/bin/muxreport
 vendor/bin/netdagent
 vendor/bin/netdc
-vendor/bin/nvram_daemon
 vendor/bin/rpmbengclient_test
 vendor/bin/rttv
 vendor/bin/self-init
@@ -2040,14 +2059,11 @@ vendor/etc/faceTpl1.rgb32
 vendor/etc/fstb.cfg
 vendor/etc/fteh.cfg
 vendor/etc/gasryuv.model
-vendor/etc/init/atcid.rc
 vendor/etc/init/atci_service.rc
 vendor/etc/init/audiocmdservice_atci.rc
 vendor/etc/init/bootperf.rc
 vendor/etc/init/camerahalserver.rc
 vendor/etc/init/em_hidl_user.rc
-vendor/etc/init/fuelgauged_init.rc
-vendor/etc/init/fuelgauged_nvram_init.rc
 vendor/etc/init/gsm0710muxd.rc
 vendor/etc/init/init.bip.rc
 vendor/etc/init/init.bt_drv.rc
@@ -2070,7 +2086,6 @@ vendor/etc/init/init_connectivity.rc
 vendor/etc/init/loghidlvendorservice.rc
 vendor/etc/init/muxreport.rc
 vendor/etc/init/netdagent.rc
-vendor/etc/init/nvram_daemon.rc
 vendor/etc/init/rild.rc
 vendor/etc/init/self-init.rc
 vendor/etc/init/tee.rc
@@ -2177,11 +2192,9 @@ vendor/lib/libCipParamProcess.so
 vendor/lib/libcrypto-ss.so
 vendor/lib/libcurl-ss.so
 vendor/lib/libcurl_xcap_md.so
-vendor/lib/libcustom_nvram.so
 vendor/lib/libcvsd_mtk.so
 vendor/lib/libdpframework.so
 vendor/lib/libffmpeg_utils.so
-vendor/lib/libfgauge_gm30.so
 vendor/lib/libfile_op.so
 vendor/lib/libfpspolicy.so
 vendor/lib/libged.so
@@ -2213,10 +2226,6 @@ vendor/lib/libmrdumpv.so
 vendor/lib/libmsbc_mtk.so
 vendor/lib/libmtcloader.so
 vendor/lib/libneuropilot_hal_utils.so
-vendor/lib/libnvram.so
-vendor/lib/libnvram_daemon_callback.so
-vendor/lib/libnvram_platform.so
-vendor/lib/libnvram_sec.so
 vendor/lib/libperfctl_vendor.so
 vendor/lib/libpixelflinger.so
 vendor/lib/libpowerhal.so
@@ -2317,7 +2326,6 @@ vendor/lib64/libCipParamProcess.so
 vendor/lib64/libcrypto-ss.so
 vendor/lib64/libcurl-ss.so
 vendor/lib64/libcurl_xcap_md.so
-vendor/lib64/libcustom_nvram.so
 vendor/lib64/libcvsd_mtk.so
 vendor/lib64/libdip_drv.so
 vendor/lib64/libdip_imem.so
@@ -2365,10 +2373,6 @@ vendor/lib64/libmrdumpv.so
 vendor/lib64/libmsbc_mtk.so
 vendor/lib64/libmtcloader.so
 vendor/lib64/libneuropilot_hal_utils.so
-vendor/lib64/libnvram.so
-vendor/lib64/libnvram_daemon_callback.so
-vendor/lib64/libnvram_platform.so
-vendor/lib64/libnvram_sec.so
 vendor/lib64/libocam_common.so
 vendor/lib64/libperfctl_vendor.so
 vendor/lib64/libPerfectlyClearCrux.so
