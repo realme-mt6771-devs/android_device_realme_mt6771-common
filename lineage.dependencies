@@ -6,11 +6,17 @@
     "branch":      "eleven"
   },
   {
+    "remote":      "github",
+    "repository":  "kardebayan/android_packages_apps_RealmeParts",
+    "target_path": "packages/apps/RealmeParts",
+    "branch":      "eleven"
+  },
+  {
    "remote"      : "github",
    "repository"  : "PixelExperience/device_mediatek_sepolicy_vndr",
    "target_path" : "device/mediatek/sepolicy_vndr",
    "branch"      : "eleven"
-  },
+  },  
   {
     "remote":      "github",
     "repository":  "stormbreaker-project/kernel_oppo_CPH1859",

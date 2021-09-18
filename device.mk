@@ -7,6 +7,9 @@
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oppo/CPH1859/CPH1859-vendor.mk)
 
+# RealmeParts
+$(call inherit-product, packages/apps/RealmeParts/parts.mk)
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@4.0 \
