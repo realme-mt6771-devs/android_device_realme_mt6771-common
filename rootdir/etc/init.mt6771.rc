@@ -3,34 +3,13 @@
 import /vendor/etc/init/hw/init.connectivity.rc
 import /vendor/etc/init/hw/init.mt6771.usb.rc
 import /vendor/etc/init/hw/init.project.rc
-import /FWUpgradeInit.rc
 import /vendor/etc/init/hw/init.volte.rc
 import /vendor/etc/init/hw/init.mal.rc
 import /vendor/etc/init/hw/init.sensor_1_0.rc
 
-#ifdef VENDOR_EDIT
-#Long.Liu@BSP.Fingerprint.Basic 2018/10/16 Add for fingerprint
-import /init.oppo.fingerprints.rc
-#endif
-
-#ifdef VENDOR_EDIT
-#Long.Liu@BSP.Fingerprint.Basic 2018/10/16 Add for face
-import /init.oppo.face.rc
-#endif
-
-#ifdef VENDOR_EDIT
-#Long.Liu@BSP.Fingerprint.Basic 2018/10/16 Add for seccommon
-import /init.oppo.seccommon.rc
-#endif
-
 # init.modem.rc must be the LAST rc file because vold.post_fs_data_done is set in it
 import /vendor/etc/init/hw/init.modem.rc
 # *** DO NOT import the new rc file after this line ***
-
-#ifdef VENDOR_EDIT
-#Canjie.Zheng@PSW.AD.OppoDebug.CriticalLog.1067207, 2016/01/07, Add for critical log.
-import init.oppo.debug.rc
-#endif
 
 on early-init
     write /proc/bootprof "INIT:early-init"
@@ -295,8 +274,6 @@ on post-fs-data
     #insmod /vendor/lib/modules/mali.ko
     chmod 666 /dev/mali0
     #chown system graphics /dev/mali
-
-
 
     # Touch Panel
     # chmod 0664 /dev/touch
@@ -1208,74 +1185,7 @@ service osi /system/bin/osi
     oneshot
     #seclabel u:r:osi:s0
 
-#ifdef VENDOR_EDIT
-#zhoumingjun@swdp2.shanghai 2018/07/19, Add for run the init.oppo.kneuron.sh on property
-service kneuron_context /system/bin/sh /system/etc/init.oppo.kneuron.sh
-    user root
-    disabled
-    oneshot
-    seclabel u:r:rutilsdaemon:s0
-
-on property:persist.sys.enable.kneuron=*
-    start kneuron_context
-#endif
-
-#ifdef VENDOR_EDIT
-#xiaocheng.li@Swdp.Shanghai, 2016/1/25, Add hypnus service
-service hypnus_context /system/bin/sh /system/etc/init.oppo.hypnus.sh
-    user root
-    disabled
-    oneshot
-    seclabel u:r:hypnus_context:s0
-
-on property:persist.sys.enable.hypnus=*
-    start hypnus_context
-
-#yan.chen@swdp.shanghai 2016/07/25, add property control for hypnus logging
-service hypnus_logging /system/bin/sh /system/etc/init.oppo.hypnus_logging.sh
-    user root
-    disabled
-    oneshot
-
-on property:persist.sys.oppo.junklog=*
-    start hypnus_logging
-#endif /* VENDOR_EDIT */
-
-#ifdef VENDOR_EDIT
-#wangmingyuan@oppo.com 2017/01/24, add for hypnus and oiface RUS feature
-    mkdir /data/oiface 0700 system system
-    mkdir /data/hypnus 0700 system system
-#endif
-
-# ifdef COLOROS_EDIT
-# Shengyang.Luo@Plf.Framework, 2018/03/28, Add for trp
-on post-fs-data
-    mkdir /data/oppo/trp 0771 system system
-# endif /* COLOROS_EDIT */
-
-#ifdef VENDOR_EDIT
-#huangliang@swdp2.shanghai, 2018/10/11, Add for kneuron and elsa
-on post-fs-data
-    mkdir /data/elsa 0700 system system
-    mkdir /data/kneuron 0700 system system
-#endif /* COLOROS_EDIT */
-
-#ifdef VENDOR_EDIT
-#Haibing.Wang@AD.CTS.1626045, 2018/12/24, Add for Android P VTS fingerprint
-on property:ro.vendor.oppo.fingerprint=*
-    setprop ro.vendor.build.fingerprint ${ro.vendor.oppo.fingerprint}
-on property:ro.vendor.oppo.product.manufacturer=*
-    setprop ro.product.vendor.manufacturer ${ro.vendor.oppo.product.manufacturer}
-on property:ro.vendor.oppo.product.model=*
-    setprop ro.product.vendor.model ${ro.vendor.oppo.product.model}
-on property:ro.vendor.oppo.product.brand=*
-    setprop ro.product.vendor.brand ${ro.vendor.oppo.product.brand}
-on property:ro.vendor.oppo.product.name=*
-    setprop ro.product.vendor.name ${ro.vendor.oppo.product.name}
-on property:ro.vendor.oppo.product.device=*
-    setprop ro.product.vendor.device ${ro.vendor.oppo.product.device}
-#endif
-
+on boot
     # Toggle airplane mode on and off on boot to enable volte.
     # This hack needs ImsInit commit to request ims on boot to work properly.
 
