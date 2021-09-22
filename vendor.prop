@@ -201,3 +201,4 @@ ro.vendor.mtk_nn.option=B
 ro.vendor.mtk_nn_quant_preferred=1
 debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
+debug.stagefright.ccodec=0
