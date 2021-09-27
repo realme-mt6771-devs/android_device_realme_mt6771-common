@@ -1,0 +1,1 @@
+allow wmt_loader proc:file { open read };
