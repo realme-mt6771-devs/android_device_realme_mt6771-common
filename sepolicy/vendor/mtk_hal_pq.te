@@ -1,0 +1,1 @@
+allow mtk_hal_pq proc_devinfo:file r_file_perms;
