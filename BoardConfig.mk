@@ -92,10 +92,10 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # SEPolicy
-include device/mediatek/sepolicy_vndr/SEPolicy.mk
+#include device/mediatek/sepolicy_vndr/SEPolicy.mk
 
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
-BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+#BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # VNDK
 BOARD_VNDK_VERSION := current
