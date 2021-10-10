@@ -178,7 +178,7 @@ PRODUCT_COPY_FILES += \
 
 # Radio
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.2
+    android.hardware.radio@1.2.vendor
 
 # Ramdisk
 PRODUCT_PACKAGES += \
