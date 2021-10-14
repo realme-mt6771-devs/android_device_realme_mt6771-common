@@ -19,8 +19,10 @@ cc_library_static {
     recovery_available: true,
     srcs: ["init_mt6771.cpp"],
     whole_static_libs: ["libbase"],
+    header_libs: [
+        "libbase_headers",
+    ],
     include_dirs: [
-        "system/core/base/include",
         "system/core/init"
     ]
 }
