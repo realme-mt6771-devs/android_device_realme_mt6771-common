@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2021 The CipherOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -12,14 +12,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Inherit from CPH1859 device
 $(call inherit-product, device/oppo/CPH1859/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common CipherOS stuff.
+$(call inherit-product, vendor/cipher/config/common_full_phone.mk)
 
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_CPH1859
+PRODUCT_NAME := cipher_CPH1859
 PRODUCT_DEVICE := CPH1859
 PRODUCT_BRAND := oppo
 PRODUCT_MODEL := realme 1
