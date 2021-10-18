@@ -20,6 +20,9 @@ ro.mtk_perf_response_time=1
 sys.ipo.pwrdncap=2
 sys.ipo.disable=1
 
+# System
+persist.sys.binary_xml=false
+
 # Radio
 rild.libpath=mtk-ril.so
 rild.libargs=-d /dev/ttyC0
