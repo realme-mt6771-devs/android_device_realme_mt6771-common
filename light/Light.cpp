@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.light@2.0-service.CPH1859"
+#define LOG_TAG "android.hardware.light@2.0-service.realme_mt6771"
 
 #include <log/log.h>
 

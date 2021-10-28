@@ -1,4 +1,4 @@
-service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.CPH1859
+service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.realme_mt6771
     interface android.hardware.light@2.0::ILight default
     class hal
     user system

@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/oppo/CPH1859
+COMMON_PATH := device/realme/mt6771-common
 BOARD_VENDOR := oppo
 
 # Architecture
@@ -22,11 +22,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a73
 
-# Assertions
-TARGET_OTA_ASSERT_DEVICE := CPH1859,CPH1861
-
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := oppo6771_17065
 TARGET_NO_BOOTLOADER := true
 
 # Build
@@ -37,8 +33,8 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_PREBUILT_ELF_FILES := true
 
 # HIDL
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive
@@ -54,8 +50,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := r353983c1
-TARGET_KERNEL_CONFIG := oppo6771_17065_defconfig
-TARGET_KERNEL_SOURCE := kernel/oppo/CPH1859
+TARGET_KERNEL_SOURCE := kernel/realme/mt6771
 
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET)
@@ -87,11 +82,11 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_BOARD_PLATFORM := mt6771
 
 # Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
+TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6771
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.mt6771
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 # Security patch level
@@ -100,8 +95,8 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 # SEPolicy
 #include device/mediatek/sepolicy_vndr/SEPolicy.mk
 
-#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
-#BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
+#BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 # VNDK
 BOARD_VNDK_VERSION := current
