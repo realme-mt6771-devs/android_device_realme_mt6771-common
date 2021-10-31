@@ -69,3 +69,6 @@ wifi.direct.interface=p2p0
 
 # Zygote
 ro.zygote.preload.enable=0
+
+# Enable IORap I/O Prefetching
+persist.device_config.runtime_native_boot.iorap_perfetto_enable=true
