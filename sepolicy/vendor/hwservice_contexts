@@ -1,2 +1,3 @@
 # Mediatek
 vendor.mediatek.hardware.apmonitor::IAPMonitorService               u:object_r:hal_apmonitor_hwservice:s0
+vendor.oppo.hardware.cryptoeng::ICryptoeng u:object_r:hal_cryptoeng_hwservice:s0
