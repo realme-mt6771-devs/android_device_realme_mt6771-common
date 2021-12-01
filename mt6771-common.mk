@@ -234,7 +234,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.1.vendor
+    android.hardware.usb@1.0-service.realme_mt6771
 
 # Vibrator
 PRODUCT_PACKAGES += \
