@@ -11,8 +11,6 @@ on early-init
     # boot perf. tune
     write /proc/perfmgr/legacy/boot_freq "5 0 0 0"
     write /sys/devices/platform/10012000.dvfsrc_top/helio-dvfsrc/dvfsrc_debug "kir_emi 0"
-    mount debugfs debugfs /sys/kernel/debug
-    chmod 0755 /sys/kernel/debug
 
 on init
     # BPF
