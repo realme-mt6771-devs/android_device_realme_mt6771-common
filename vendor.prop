@@ -1,10 +1,3 @@
-ro.config.alarm_alert=ringtone_008.ogg
-ro.config.ringtone=ringtone_000.ogg
-ro.config.notification_sms=notification_000.ogg
-ro.config.notification_sound=notification_000.ogg
-ro.config.ringtone_sim2=ringtone_000.ogg
-ro.config.notification_sim2=notification_000.ogg
-ro.config.calendar_sound=notification_003.ogg
 ro.carrier=unknown
 ro.oppo.theme.version=6000
 ro.dalvik.vm.native.bridge=0
