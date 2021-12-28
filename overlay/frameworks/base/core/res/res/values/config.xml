@@ -314,4 +314,7 @@
          we only enabled it while the device has ability of mixed color spaces composition -->
     <bool name="config_enableWcgMode">true</bool>
 
+    <!-- Whether the Unprocessed audio source supports the required frequency range and level -->
+     <bool name="config_supportAudioSourceUnprocessed">true</bool>
+
 </resources>
