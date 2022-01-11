@@ -12,6 +12,8 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     android.hardware.audio@4.0.vendor \
     android.hardware.soundtrigger@2.1-impl \
+    android.hardware.soundtrigger@2.1 \
+    android.hardware.soundtrigger@2.1.vendor \
     audio.a2dp.default \
     audio.bluetooth.default \
     audio.r_submix.default \
