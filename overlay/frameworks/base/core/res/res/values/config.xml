@@ -310,4 +310,8 @@
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently in hardware. -->
     <bool name="config_setColorTransformAccelerated">true</bool>
 
+    <!-- Whether or not wcg (wide color gamut) should be enabled on this device,
+         we only enabled it while the device has ability of mixed color spaces composition -->
+    <bool name="config_enableWcgMode">true</bool>
+
 </resources>
