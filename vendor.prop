@@ -142,7 +142,6 @@ ro.vendor.mtk_data_config=1
 vendor.mtk.vdec.waitkeyframeforplay=1
 ro.vendor.mtk_embms_support=1
 ro.sys.sdcardfs=1
-debug.sf.disable_backpressure=1
 debug.sf.latch_unsignaled=0
 ro.ksc5601_write=0
 ro.email_support_ucs2=0
