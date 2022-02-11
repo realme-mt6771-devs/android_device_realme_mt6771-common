@@ -197,6 +197,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     engineer_vendor_shell.sh \
     init.oppo.securetemplet.sh \
+    set_zram.sh \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6771.rc \
