@@ -1,0 +1,1 @@
+allow mtk_agpsd hal_apmonitor_hwservice:hwservice_manager find;
