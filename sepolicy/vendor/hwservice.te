@@ -1,0 +1,2 @@
+# Mediatek
+type hal_apmonitor_hwservice, hwservice_manager_type;
