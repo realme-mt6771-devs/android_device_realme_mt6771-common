@@ -43,7 +43,6 @@ sys.ipo.disable=1
 persist.sys.binary_xml=false
 
 # Graphics
-debug.hwui.renderer=opengl
 ro.config.avoid_gfx_accel=true
 debug.sf.enable_hwc_vds=0
 debug.hwui.use_buffer_age=false
