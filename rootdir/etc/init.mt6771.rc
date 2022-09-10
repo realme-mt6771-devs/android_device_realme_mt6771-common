@@ -69,7 +69,7 @@ on fs
     # opporeserve mount point
     mkdir /mnt/vendor/opporeserve 0771 system system
 
-    mount_all /vendor/etc/fstab.mt6771
+    mount_all /vendor/etc/fstab.mt6771 --early
     write /sys/kernel/debug/tracing/trace_marker "E"
     write /proc/bootprof "INIT:Mount_END"
     write /sys/block/zram0/comp_algorithm lz4
@@ -77,6 +77,10 @@ on fs
     swapon_all /vendor/etc/fstab.mt6771
     write /proc/sys/vm/swappiness 60
     write /proc/sys/vm/direct_swappiness 50
+
+on late-fs
+    # Mount RW partitions which need run fsck
+    mount_all /vendor/etc/fstab.mt6771 --late
 
 on post-fs
     write /proc/bootprof "INIT:post-fs"
