@@ -7,7 +7,7 @@
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-    
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@4.0.vendor \
@@ -112,7 +112,7 @@ PRODUCT_PACKAGES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.realme_mt6771
+    android.hardware.light-service.realme_mt6771
 
 # Media
 PRODUCT_COPY_FILES += \
