@@ -7,3 +7,6 @@ net.ipv6.ccmni0.prefix                      u:object_r:rild_ipv6_prop:s0
 
 # Sensors
 sys.oppo.hasPhysicalGyroscope               u:object_r:oppo_sensor_prop:s0
+
+# Camera
+vendor.oppo.camera.project                  u:object_r:oppo_camera_prop:s0
