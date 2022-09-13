@@ -1,1 +1,2 @@
 set_prop(mtk_hal_audio, audio_tunning_prop)
+get_prop(mtk_hal_audio, audiohal_prop)
