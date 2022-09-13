@@ -6,3 +6,6 @@
 
 # oppoVersion
 /proc/oppoVersion(/.*)?                                            u:object_r:proc_oppoversion:s0
+
+# USB HAL
+/(vendor|system/vendor)/bin/hw/android\.hardware\.usb@1\.0-service\.realme_mt6771       u:object_r:hal_usb_default_exec:s0
