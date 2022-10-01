@@ -1,1 +1,3 @@
 allow mtk_agpsd hal_apmonitor_hwservice:hwservice_manager find;
+get_prop(mtk_agpsd, mtk_ril_mode_prop)
+get_prop(mtk_agpsd, mtk_md_prop)
