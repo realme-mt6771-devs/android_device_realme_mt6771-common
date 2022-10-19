@@ -95,8 +95,8 @@ static void workaround_snet_properties() {
 void vendor_load_properties()
 {
     // fingerprint
-    property_override("ro.build.description", "redfin-user 12 SP2A.220305.012 8177914 release-keys");
-    property_override_prop("ro.build.fingerprint", "google/redfin/redfin:12/SP2A.220305.012/8177914:user/release-keys");
+    property_override("ro.build.description", "coral-user 13 TP1A.221005.002 9012097 release-keys");
+    property_override_prop("ro.build.fingerprint", "google/coral/coral:13/TP1A.221005.002/9012097:user/release-keys");
 
     // Workaround SafetyNet
     workaround_snet_properties();
