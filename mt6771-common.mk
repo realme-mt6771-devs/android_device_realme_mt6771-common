@@ -34,6 +34,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.a2dp@1.0.vendor \
     android.hardware.bluetooth@1.0.vendor \
+    audio.bluetooth.default \
 
 # Cgroup and task_profiles
 PRODUCT_COPY_FILES += \
