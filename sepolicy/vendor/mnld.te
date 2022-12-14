@@ -1,2 +1,0 @@
-get_prop(mnld, mtk_gps_support_prop)
-get_prop(mnld, service_nvram_init_prop)
