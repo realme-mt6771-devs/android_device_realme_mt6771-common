@@ -128,6 +128,7 @@ persist.vendor.connsys.dynamic.dump=0
 vendor.connsys.driver.ready=no
 ro.vendor.wlan.gen=gen3
 persist.radio.mobile.data=0,0
+debug.fdsan=warn_once
 persist.meta.dumpdata=0
 ro.mtk_deinterlace_support=1
 persist.vendor.radio.mtk_dsbp_support=1

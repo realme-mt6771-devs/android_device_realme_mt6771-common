@@ -20,6 +20,9 @@ debug.cpurend.vsync=false
 persist.sys.sf.color_saturation=1.1
 persist.sys.sf.native_mode=0
 
+# Fdsan
+debug.fdsan=warn_once
+
 # Kernel
 ro.kernel.zio=38,108,105,16
 
