@@ -195,3 +195,6 @@ debug.sf.hwc.min.duration=17000000
 ro.lmk.use_minfree_levels=true
 ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=100
+
+# Bluetooth
+bluetooth.device.class_of_device=26,2,12
